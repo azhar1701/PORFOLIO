@@ -1,0 +1,191 @@
+
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "FEMA Floodplain Remapping Initiative",
+      "category": "Hydraulic Modeling",
+      "imageUrl": "https://picsum.photos/seed/project1/600/400",
+      "year": 2023,
+      "kpis": [
+        { "label": "100-yr Flood Accuracy", "value": "98.5%" },
+        { "label": "Catchment Area", "value": "500 km²" }
+      ],
+      "description": "Led a multi-county project to update and modernize FEMA Flood Insurance Rate Maps (FIRMs). The project involved detailed 1D and 2D hydraulic modeling using HEC-RAS to accurately delineate floodplains, providing critical data for risk assessment and urban planning.",
+      "technologies": ["HEC-RAS 2D", "ArcGIS Pro", "FEMA CAMS"],
+      "coordinates": [34.0522, -118.2437],
+      "caseStudyUrl": "#projects",
+      "chartTitle": "Model Accuracy Improvement",
+      "chartData": [
+        { "name": "Initial", "value": 85, "unit": "%" },
+        { "name": "Calib.", "value": 92, "unit": "%" },
+        { "name": "Valid.", "value": 95, "unit": "%" },
+        { "name": "Final", "value": 98.5, "unit": "%" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Urban Drainage System Redesign",
+      "category": "Stormwater",
+      "imageUrl": "https://picsum.photos/seed/project2/600/400",
+      "year": 2022,
+      "kpis": [
+        { "label": "Runoff Volume Reduction", "value": "35%" },
+        { "label": "Peak Flow Attenuation", "value": "20%" }
+      ],
+      "description": "Designed a comprehensive retrofit of an aging urban stormwater system for a major metropolitan area. The solution incorporated green infrastructure elements like permeable pavements and bioswales, modeled in SWMM to optimize performance and reduce combined sewer overflow events.",
+      "technologies": ["EPA SWMM", "AutoCAD Civil 3D", "HydroCAD"],
+      "coordinates": [40.7128, -74.0060],
+      "caseStudyUrl": "#projects",
+      "chartTitle": "Storm Event Peak Flow (CFS)",
+      "chartData": [
+        { "name": "Pre-Dev", "value": 1200 },
+        { "name": "Post-Dev", "value": 850 },
+        { "name": "w/ GI", "value": 680 }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Watershed Delineation for Eco-Reserve",
+      "category": "GIS & Mapping",
+      "imageUrl": "https://picsum.photos/seed/project3/600/400",
+      "year": 2021,
+      "kpis": [
+        { "label": "Resolution", "value": "1m DEM" },
+        { "label": "Area Analyzed", "value": "1,200 km²" }
+      ],
+      "description": "Utilized high-resolution LiDAR data and ArcGIS Pro to perform a detailed watershed delineation for a sensitive ecological reserve. The analysis identified critical sub-basins and flow paths, informing conservation strategies and land management policies.",
+      "technologies": ["ArcGIS Pro", "QGIS", "Python (ArcPy)"],
+      "coordinates": [47.6062, -122.3321],
+      "caseStudyUrl": "#projects",
+      "chartTitle": "Processing Time vs. DEM Resolution",
+      "chartData": [
+        { "name": "30m", "value": 5, "unit": "min" },
+        { "name": "10m", "value": 25, "unit": "min" },
+        { "name": "3m", "value": 120, "unit": "min" },
+        { "name": "1m", "value": 480, "unit": "min" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Contaminant Plume Modeling",
+      "category": "Environmental",
+      "imageUrl": "https://picsum.photos/seed/project4/600/400",
+      "year": 2023,
+      "kpis": [
+        { "label": "Prediction Confidence", "value": "95%" },
+        { "label": "Remediation Time", "value": "-2 years" }
+      ],
+      "description": "Developed a 3D groundwater model using MODFLOW to simulate the transport of a contaminant plume from an industrial site. The model was calibrated with field data and used to evaluate the effectiveness of various remediation scenarios, leading to a more efficient and cost-effective cleanup strategy.",
+      "technologies": ["MODFLOW", "GMS", "Surfer"],
+      "coordinates": [29.7604, -95.3698],
+      "caseStudyUrl": "#projects",
+      "chartTitle": "Contaminant Concentration (PPB)",
+      "chartData": [
+        { "name": "Yr 0", "value": 500 },
+        { "name": "Yr 2", "value": 350 },
+        { "name": "Yr 5", "value": 150 },
+        { "name": "Yr 10", "value": 25 }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Dam Break Analysis & Emergency Action Plan",
+      "category": "Hydraulic Modeling",
+      "imageUrl": "https://picsum.photos/seed/project5/600/400",
+      "year": 2020,
+      "kpis": [
+        { "label": "Inundation Mapping", "value": "Complete" },
+        { "label": "EAP Approved", "value": "State Level" }
+      ],
+      "description": "Conducted a dam break analysis for a high-hazard potential dam, generating detailed inundation maps for various failure scenarios. The results formed the basis of a comprehensive Emergency Action Plan (EAP) that was approved by state regulators.",
+      "technologies": ["HEC-RAS", "HEC-HMS", "ArcGIS"],
+      "coordinates": [39.7392, -104.9903],
+      "caseStudyUrl": "#projects",
+      "chartTitle": "Downstream Peak Flow (CFS)",
+      "chartData": [
+        { "name": "0 mi", "value": 150000 },
+        { "name": "5 mi", "value": 95000 },
+        { "name": "10 mi", "value": 60000 },
+        { "name": "20 mi", "value": 30000 }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Green Infrastructure Suitability Analysis",
+      "category": "GIS & Mapping",
+      "imageUrl": "https://picsum.photos/seed/project6/600/400",
+      "year": 2022,
+      "kpis": [
+        { "label": "Suitable Parcels ID'd", "value": "250+" },
+        { "label": "Stormwater Capture", "value": "1.5M gal/yr" }
+      ],
+      "description": "Performed a GIS-based multi-criteria suitability analysis to identify optimal locations for green infrastructure implementation within a city. The study considered soil types, slope, land use, and proximity to existing drainage systems to maximize stormwater capture potential.",
+      "technologies": ["QGIS", "SAGA GIS", "PostGIS"],
+      "coordinates": [41.8781, -87.6298],
+      "caseStudyUrl": "#projects",
+      "chartTitle": "Suitability Score Distribution",
+      "chartData": [
+        { "name": "Low", "value": 450 },
+        { "name": "Med", "value": 800 },
+        { "name": "High", "value": 257 },
+        { "name": "Ideal", "value": 120 }
+      ]
+    }
+  ],
+  "expertiseItems": [
+    { "iconName": "WaterIcon", "title": "Surface Water & Flood Risk", "tools": "HEC-RAS, HEC-HMS, TUFLOW" },
+    { "iconName": "MapIcon", "title": "GIS & Watershed Mapping", "tools": "ArcGIS Pro, QGIS, Global Mapper" },
+    { "iconName": "CloudIcon", "title": "Stormwater Management", "tools": "SWMM, HydroCAD, AutoCAD Civil 3D" },
+    { "iconName": "LeafIcon", "title": "Groundwater & Environmental", "tools": "MODFLOW, FEFLOW, EPA Compliance" }
+  ],
+  "credentials": [
+    { "name": "P.E. License" },
+    { "name": "CFM Certification" },
+    { "name": "ASCE Member" },
+    { "name": "PMP Certified" },
+    { "name": "LEED AP" },
+    { "name": "ENV SP" }
+  ],
+  "testimonials": [
+    {
+      "quote": "J. Doe's hydraulic models are meticulous. The clarity and accuracy of the HEC-RAS analysis for our floodplain remapping project were instrumental in gaining regulatory approval ahead of schedule.",
+      "author": "Jane Smith",
+      "title": "Lead Planner, Tri-County Planning Commission"
+    },
+    {
+      "quote": "The GIS suitability analysis provided was a game-changer. It allowed us to strategically deploy green infrastructure with confidence, maximizing our ROI and environmental impact.",
+      "author": "Robert Johnson",
+      "title": "Director of Public Works, City of Metropolis"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Comparing 1D vs. 2D Modeling in HEC-RAS for Urban Floodplains",
+      "excerpt": "A deep dive into the practical considerations and outcomes when choosing between 1D and 2D hydraulic modeling approaches for complex urban environments.",
+      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "link": "#/insights/1d-vs-2d-hec-ras-modeling",
+      "metaDescription": "Explore a detailed comparison of 1D and 2D HEC-RAS modeling for urban floodplains, including accuracy, computational cost, and best-use cases for civil engineers.",
+      "ogImage": "https://picsum.photos/seed/blog1-og/1200/630"
+    },
+    {
+      "id": 2,
+      "title": "The Impact of Climate Data on Modern Hydrological Analysis",
+      "excerpt": "How updated climate projections are reshaping stormwater design standards and the methodologies used to ensure long-term infrastructure resilience.",
+      "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+      "link": "#/insights/climate-data-hydrology",
+      "metaDescription": "Learn how modern climate projection data is fundamentally changing hydrological analysis and stormwater management design standards for increased resilience.",
+      "ogImage": "https://picsum.photos/seed/blog2-og/1200/630"
+    },
+    {
+      "id": 3,
+      "title": "Common Pitfalls in SWMM Calibration & How to Avoid Them",
+      "excerpt": "An exploration of the most common challenges faced during the calibration of urban drainage models and strategies to improve model accuracy and reliability.",
+      "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+      "link": "#/insights/swmm-calibration-pitfalls",
+      "metaDescription": "A technical guide for hydrologists on avoiding common pitfalls in EPA SWMM calibration to achieve more accurate and reliable urban drainage models.",
+      "ogImage": "https://picsum.photos/seed/blog3-og/1200/630"
+    }
+  ]
+}
