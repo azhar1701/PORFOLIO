@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Project } from '../types';
 import ProjectChart from './ProjectChart';
@@ -133,7 +132,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, projects, onClose,
           )}
         </div>
       </div>
-      <style jsx global>{`
+      {/* FIX: Removed non-standard 'jsx' and 'global' props. This syntax is for styled-jsx (e.g., in Next.js), not standard React. */}
+      <style>{`
         @keyframes fade-in {
           from { opacity: 0; }
           to { opacity: 1; }

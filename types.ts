@@ -1,4 +1,5 @@
 
+
 // FIX: Import React to make React types like React.ReactNode available.
 import React from 'react';
 
@@ -16,7 +17,7 @@ export interface Project {
   category: ProjectCategory;
   imageUrl: string;
   year: number;
-  kpis: {
+  kpis?: {
     label: string;
     value: string;
   }[];

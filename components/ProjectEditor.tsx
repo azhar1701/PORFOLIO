@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { Project, ProjectCategory } from '../types';
 import { PROJECT_CATEGORIES } from '../constants';
@@ -22,7 +21,7 @@ const Select = (props: React.SelectHTMLAttributes<HTMLSelectElement>) => (
 );
 
 const ProjectEditor: React.FC<ProjectEditorProps> = ({ project, onSave, onCancel }) => {
-    const [formData, setFormData] = useState<Omit<Project, 'id' | 'coordinates' | 'kpis'> & { technologies: string, lat: number, lon: number }>({
+    const [formData, setFormData] = useState<Omit<Project, 'id' | 'coordinates' | 'technologies' | 'kpis'> & { technologies: string, lat: number, lon: number }>({
         title: project?.title || '',
         category: project?.category || 'Hydraulic Modeling',
         imageUrl: project?.imageUrl || '',
@@ -32,8 +31,8 @@ const ProjectEditor: React.FC<ProjectEditorProps> = ({ project, onSave, onCancel
         caseStudyUrl: project?.caseStudyUrl || '#projects',
         chartTitle: project?.chartTitle || '',
         chartData: project?.chartData || [],
-        lat: project?.coordinates[0] || 0,
-        lon: project?.coordinates[1] || 0,
+        lat: project?.coordinates?.[0] || 0,
+        lon: project?.coordinates?.[1] || 0,
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -66,7 +65,7 @@ const ProjectEditor: React.FC<ProjectEditorProps> = ({ project, onSave, onCancel
             id: project?.id || Date.now(),
             technologies: formData.technologies.split(',').map(t => t.trim()).filter(Boolean),
             coordinates: [formData.lat, formData.lon],
-            kpis: [], // KPIs are now derived from chart data or managed elsewhere
+            // kpis are now derived from chart data
         };
         onSave(finalProject);
     };
@@ -100,13 +99,14 @@ const ProjectEditor: React.FC<ProjectEditorProps> = ({ project, onSave, onCancel
                     
                     {/* Chart Data Editor */}
                     <div className="pt-4 border-t border-slate-700">
-                        <h2 className="text-xl font-semibold text-white">Chart Data</h2>
+                        <h2 className="text-xl font-semibold text-white">Chart Data & KPIs</h2>
+                        <p className="text-sm text-slate-400 mb-2">KPIs shown on the project card are automatically generated from this data.</p>
                         <div><label className="text-slate-300 block mb-1">Chart Title</label><Input name="chartTitle" value={formData.chartTitle} onChange={handleChange}/></div>
                         <div className="space-y-2 mt-2">
                           {(formData.chartData || []).map((point, index) => (
                               <div key={index} className="grid grid-cols-4 gap-2 items-center">
                                   <Input placeholder="Name (e.g., 'Yr 1')" value={point.name} onChange={e => handleChartDataChange(index, 'name', e.target.value)} />
-                                  <Input type="number" placeholder="Value" value={point.value} onChange={e => handleChartDataChange(index, 'value', Number(e.target.value))} />
+                                  <Input type="number" step="any" placeholder="Value" value={point.value} onChange={e => handleChartDataChange(index, 'value', Number(e.target.value))} />
                                   <Input placeholder="Unit (e.g., '%')" value={point.unit} onChange={e => handleChartDataChange(index, 'unit', e.target.value)} />
                                   <button type="button" onClick={() => removeChartDataPoint(index)} className="text-red-500 hover:text-red-400 font-bold">Remove</button>
                               </div>

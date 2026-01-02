@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Credential } from '../types';
 
@@ -23,7 +22,8 @@ const CredentialsBar: React.FC<{ credentials: Credential[] }> = ({ credentials }
           ))}
         </div>
       </div>
-      <style jsx>{`
+      {/* FIX: Removed non-standard 'jsx' prop. This syntax is for styled-jsx (e.g., in Next.js), not standard React. */}
+      <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
